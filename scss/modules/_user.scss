@@ -1,0 +1,77 @@
+/* ==|====================
+   Modules/User
+   ======================= */
+
+.user {
+	@include clearfix;
+
+	margin-bottom: 18px;
+	padding: 18px 0;
+
+	border-bottom: 1px solid #b7b7b7;
+}
+
+.user-cabinet {
+	float: left;
+
+	width: 300px;
+}
+
+.user-exit {
+	float: right;
+}
+
+.user-name {
+	font-weight: bold;
+	line-height: 30px;
+
+	float: left;
+
+	padding-left: 22px;
+	&:before {
+		@extend %sprite;
+
+		display: block;
+		float: left;
+
+		width: 16px;
+		height: 16px;
+		margin: 6px 0 0 -22px;
+
+		content: '';
+
+		background-position: -52px -137px;
+	}
+}
+
+.user-nav {
+	@include reset-ul;
+
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 30px;
+
+	float: right;
+
+	letter-spacing: .025em;
+	text-transform: uppercase;
+	& > li {
+		float: left;
+
+		margin-left: 20px;
+		a {
+			color: #0b162f;
+			&:hover {
+				color: #182465;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&.active {
+			font-weight: bold;
+
+			color: #182465;
+		}
+	}
+}

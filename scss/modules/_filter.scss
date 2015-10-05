@@ -1,0 +1,71 @@
+/* ==|====================
+   Modules/Filter
+   ======================= */
+
+.filter {
+	@include last-margin;
+
+	margin-bottom: 36px;
+	padding: 18px 0 0;
+}
+
+.filter-columns {
+	@include clearfix;
+
+	width: 1090px;
+	margin: 0 auto;
+}
+
+.filter-column {
+	float: left;
+
+	margin-right: 25px;
+	.priceslider-holder {
+		width: 240px;
+		padding: 0;
+	}
+	.priceslider-values {
+		margin-bottom: 32px;
+	}
+}
+
+.filter-group {
+	@include clearfix;
+
+	margin-bottom: 18px;
+	&.filter-group-persons,
+	&.filter-group-type {
+		width: 240px;
+		.filter-group-label {
+			width: 110px;
+		}
+		.filter-group-field {
+			width: 130px;
+		}
+	}
+	&.filter-group-brand,
+	&.filter-group-decor {
+		width: 240px;
+		.filter-group-label {
+			width: 50px;
+		}
+		.filter-group-field {
+			width: 190px;
+		}
+	}
+	&.custom-checkbox {
+		width: 120px;
+	}
+}
+
+.filter-group-label {
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 34px;
+
+	float: left;
+}
+
+.filter-group-field {
+	float: left;
+}

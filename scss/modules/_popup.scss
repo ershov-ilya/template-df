@@ -1,0 +1,50 @@
+/* ==|====================
+   Modules/Popup
+   ======================= */
+
+.popup-overlay {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: none;
+	overflow-y: auto;
+
+	background: rgba(0,0,0,.5);
+}
+
+.popup {
+	position: absolute;
+	top: 0;
+	left: 50%;
+
+	display: none;
+
+	width: 536px;
+	margin-bottom: 30px;
+	margin-left: -268px;
+	padding: 18px;
+
+	background: white;
+}
+
+.popup-close-btn {
+	@extend %sprite;
+
+	position: absolute;
+	top: -30px;
+	right: 0;
+
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	background-position: -168px -67px;
+}

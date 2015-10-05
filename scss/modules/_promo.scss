@@ -1,0 +1,179 @@
+/* ==|====================
+   Modules/Promo
+   ======================= */
+
+.promo {
+	position: relative;
+
+	overflow: hidden;
+}
+
+.promo-item {
+	position: relative;
+
+	display: none;
+	float: left;
+
+	background: black;
+	&:first-child {
+		display: block;
+	}
+}
+
+.promo-link {
+	display: block;
+
+	color: white;
+	&:before {
+		@include transition(background .2s ease-in-out);
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		display: block;
+
+		content: '';
+
+		background: transparent;
+	}
+	&:hover {
+		&:before {
+			z-index: 2;
+
+			background: rgba(0,0,0,.7);
+		}
+	}
+}
+
+.promo-pic {
+	display: block;
+}
+
+.promo-brand {
+	@include transition(all .2s ease-in-out);
+
+	line-height: 122px;
+
+	position: absolute;
+	z-index: 2;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+
+	width: 156px;
+	height: 126px;
+	margin: -63px 0 0 -78px;
+
+	text-align: center;
+
+	border: 2px solid white;
+	background: $beige;
+	img {
+		display: inline-block;
+
+		vertical-align: middle;
+	}
+	.promo-link:hover & {
+		@include transform(scale(2));
+
+		opacity: 0;
+	}
+}
+
+.promo-details {
+	@include transition(all .2s ease-in-out);
+	@include transform(scale(.5));
+
+	position: absolute;
+	z-index: 2;
+	top: 50px;
+	left: 130px;
+
+	width: 540px;
+	height: 400px;
+
+	opacity: 0;
+	border: 2px solid white;
+	&:before,
+	&:after {
+		@extend %sprite;
+
+		position: absolute;
+		left: 50%;
+
+		display: block;
+
+		width: 64px;
+		height: 30px;
+		margin-left: -32px;
+
+		content: '';
+	}
+	&:before {
+		top: 85px;
+
+		background-position: 0 -163px;
+	}
+	&:after {
+		bottom: 85px;
+
+		background-position: -64px -163px;
+	}
+	.promo-link:hover & {
+		@include transform(scale(1));
+
+		opacity: 1;
+	}
+}
+
+.promo-details-body {
+	@include transform(translateY(-50%));
+
+	font-family: $georgia;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 1.25;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	width: 500px;
+	margin-left: -250px;
+
+	text-align: center;
+}
+
+.promo-details-caption {
+	font-size: 35px;
+	font-style: normal;
+	line-height: 1;
+
+	margin-bottom: 10px;
+
+	text-transform: uppercase;
+	&:before,
+	&:after {
+		@extend %sprite;
+
+		display: block;
+
+		width: 462px;
+		height: 11px;
+		margin: 0 auto;
+
+		content: '';
+
+		background-position: 0 -193px;
+	}
+	&:before {
+		margin-bottom: 10px;
+	}
+	&:after {
+		margin-top: 10px;
+	}
+}

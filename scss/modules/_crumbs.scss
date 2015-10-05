@@ -1,0 +1,36 @@
+/* ==|====================
+   Modules/Crumbs
+   ======================= */
+
+.crumbs {
+	@include reset-ul;
+
+	font-size: 10px;
+
+	margin-bottom: 10px;
+
+	text-transform: uppercase;
+	& > li {
+		display: inline-block;
+		&:after {
+			margin: 0 .25em;
+
+			content: ' /';
+		}
+		&:last-child:after {
+			display: none;
+		}
+		a {
+			color: black;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.section-header & {
+		color: white;
+		& > li a {
+			color: white;
+		}
+	}
+}

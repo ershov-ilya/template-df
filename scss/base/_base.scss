@@ -1,0 +1,90 @@
+/* =======================
+   Base
+   ======================= */
+
+html {
+	height: 100%;
+
+	background: white;
+}
+
+body {
+	font-family: $roboto;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.67;
+
+	position: relative;
+
+	min-width: 1200px;
+	min-height: 100%;
+	padding-bottom: 125px;
+
+	color: black;
+}
+
+a {
+	@include transition(color .1s ease-in-out);
+
+	color: #2b3d85;
+	&:hover {
+		color: #dcdcdc;
+	}
+}
+
+p {
+	margin: 0 0 1.67em;
+}
+
+h1 {
+	font-family: $georgia;
+	font-size: 35px;
+	font-weight: normal;
+	line-height: 35px;
+
+	margin: 0;
+
+	letter-spacing: .025em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.125;
+
+	margin: 0 0 18px;
+
+	letter-spacing: .025em;
+	&.lines-caption {
+		display: table;
+
+		width: 100%;
+		&:before,
+		&:after {
+			display: table-cell;
+
+			width: 50%;
+
+			content: '';
+
+			background: url('../i/separator.png') repeat-x 0 50%;
+			background-size: 1px 1px;
+		}
+		span {
+			display: table-cell;
+
+			padding: 0 9px;
+
+			white-space: nowrap;
+		}
+	}
+}
+
+h3 {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.25;
+
+	margin: 36px 0 18px;
+}

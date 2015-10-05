@@ -1,0 +1,32 @@
+/* ==|====================
+   Modules/Brands slider
+   ======================= */
+
+.brands-slider {
+	position: relative;
+
+	overflow: hidden;
+
+	height: 120px;
+}
+
+.brands-slider-item {
+	.brands-slider > & {
+		float: left;
+
+		width: 12.5%;
+	}
+	a {
+		display: block;
+
+		opacity: .6;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	img {
+		display: block;
+
+		margin: 0 auto;
+	}
+}

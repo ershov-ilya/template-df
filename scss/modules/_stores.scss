@@ -1,0 +1,55 @@
+/* ==|====================
+   Modules/Stores
+   ======================= */
+
+.stores {
+	@extend %grid;
+}
+
+.store {
+	@include media(min-width 1736px) {
+		width: 33.33%;
+	}
+
+	float: left;
+
+	width: 50%;
+	margin-bottom: 36px;
+	padding-left: 289px;
+}
+
+.store-pic {
+	float: left;
+
+	width: 250px;
+	margin-left: -280px;
+	img {
+		display: block;
+	}
+}
+
+.store-name {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.25;
+
+	margin-bottom: 10px;
+}
+
+.store-adr {
+	line-height: 1.25;
+
+	margin-bottom: 6px;
+}
+
+.store-adr-link {
+	font-size: 10px;
+
+	text-decoration: none;
+
+	border-bottom: 1px dotted;
+}
+
+.store-tel {
+	font-weight: 500;
+}

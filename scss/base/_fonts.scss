@@ -1,0 +1,25 @@
+/* =======================
+   Fonts
+   ======================= */
+
+@include font-face(iconfont, '../fonts/iconfont');
+
+.icon {
+    font-family: iconfont;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.icon-menu:before { content: '\e800'; }
+.icon-facebook:before { content: '\e801'; }
+.icon-instagramm:before { content: '\e802'; }
+.icon-cancel:before { content: '\e803'; }
+.icon-minus:before { content: '\e804'; }
+.icon-plus:before { content: '\e805'; }

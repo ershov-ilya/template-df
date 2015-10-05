@@ -1,0 +1,43 @@
+/* ==|====================
+   Modules/Sort
+   ======================= */
+
+.sort {
+	@include clearfix;
+
+	margin-bottom: 18px;
+}
+
+.sort-order {
+	float: left;
+}
+
+.sort-order-label {
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 34px;
+
+	float: left;
+
+	width: 95px;
+}
+
+.sort-order-value {
+	float: left;
+
+	width: 165px;
+}
+
+.sort-options {
+	@include reset-ul;
+
+	float: right;
+	& > li {
+		float: left;
+
+		margin-left: 25px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
