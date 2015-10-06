@@ -1,0 +1,156 @@
+/* ==|====================
+   Modules/Cart
+   ======================= */
+
+.cart {
+	@extend %grid;
+}
+
+.cart-item {
+	@include media(min-width 1736px) {
+		width: 33.33%;
+	}
+
+	width: 50%;
+}
+
+// == Cart product
+// ----------------------
+.cart-product {
+	@include clearfix;
+
+	position: relative;
+
+	width: 518px;
+	margin: 0 auto;
+
+	background: #fafafa;
+	.product-pic {
+		float: left;
+
+		width: 250px;
+		margin: 0;
+	}
+	.product-info {
+		min-height: 2.5em;
+		max-height: auto;
+		margin-bottom: 12px;
+	}
+	.product-remove-btn {
+		top: 12px;
+		left: 12px;
+	}
+}
+
+.cart-product-body {
+	float: right;
+
+	width: 268px;
+	padding: 30px 18px 0;
+}
+
+.new-cart-product {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 28px;
+
+	display: block;
+
+	width: 518px;
+	height: 250px;
+	margin: 0 auto;
+	padding-top: 110px;
+
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: black;
+	border: 1px dashed #ddd;
+	background: white;
+	box-shadow: 0 0 30px rgba(202,201,178,.1) inset;
+	span {
+		@include transition(opacity .1s ease-in-out);
+
+		display: inline-block;
+
+		opacity: .2;
+		&:before {
+			@extend %sprite;
+
+			display: inline-block;
+			float: left;
+
+			width: 25px;
+			height: 25px;
+			margin-right: 12px;
+
+			content: '';
+
+			background-position: -175px -87px;
+		}
+	}
+	&:hover {
+		color: black;
+		span {
+			opacity: 1;
+		}
+	}
+}
+
+// == Cart footer
+// ----------------------
+.cart-footer {
+	@include clearfix;
+
+	width: 800px;
+	margin: 0 auto 36px;
+	padding: 30px;
+
+	border: 2px solid #f6f6f2;
+}
+
+.cart-total {
+	float: left;
+
+	width: 50%;
+	padding: 0 9px 0 90px;
+}
+
+.cart-total-price {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1;
+
+	margin-bottom: 10px;
+}
+
+.cart-discount {
+	font-size: 10px;
+	font-weight: normal;
+
+	text-transform: uppercase;
+	a {
+		color: black;
+		&:hover {
+			color: #182465;
+		}
+	}
+}
+
+.cart-footer-btn-holder {
+	float: left;
+
+	width: 50%;
+	padding: 0 9px;
+}
+
+.offer-text {
+	font-size: 14px;
+	line-height: 1.4;
+
+	width: 840px;
+	margin: 0 auto 36px;
+
+	text-align: center;
+}

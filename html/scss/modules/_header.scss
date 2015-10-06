@@ -1,0 +1,43 @@
+/* ==|====================
+   Modules/Header
+   ======================= */
+
+.header {
+	@include linear-gradient(to right, #0f1a40 0%, #111d4a 50%, #141f54 100%);
+
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+	width: 110px;
+	padding: 85px 0 0;
+}
+
+.header-logo {
+	@include hide-text;
+	@extend %sprite;
+
+	width: 70px;
+	height: 87px;
+	margin: 0 auto 36px;
+
+	background-position: 0 0;
+}
+
+.dev {
+	@include hide-text;
+	@extend %sprite;
+	@include media(max-height 507px) {
+		display: none;
+	}
+
+	display: block;
+
+	width: 46px;
+	height: 30px;
+	margin: 36px auto 0;
+
+	background-position: -70px -56px;
+}

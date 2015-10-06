@@ -1,0 +1,89 @@
+/* ==|====================
+   Modules/Catalogue
+   ======================= */
+
+.catalogue {
+	display: table;
+
+	width: 100%;
+}
+
+.catalogue-sidebar {
+	display: table-cell;
+
+	width: 268px;
+	padding: 18px;
+
+	vertical-align: top;
+
+	background: #fcfcfb;
+}
+
+.catalogue-content {
+	display: table-cell;
+
+	padding: 18px;
+
+	vertical-align: top;
+}
+
+.catalogue-filter {
+	margin-bottom: -1px;
+}
+
+.catalogue-filter-caption {
+	font-weight: bold;
+
+	padding: 6px 0;
+
+	cursor: pointer;
+	letter-spacing: .025em;
+	text-transform: uppercase;
+
+	color: #1c3d86;
+	border-top: 1px solid #b7b7b6;
+	border-bottom: 1px solid #b7b7b6;
+	&:before {
+		font-family: iconfont;
+		font-size: 14px;
+		line-height: 1.5;
+
+		display: block;
+		float: right;
+
+		width: 1em;
+
+		content: '\e805';
+		text-align: center;
+
+		color: #999;
+		.catalogue-filter_open & {
+			content: '\e804';
+		}
+	}
+}
+
+.catalogue-filter-body {
+	display: none;
+	.catalogue-filter_open & {
+		display: block;
+	}
+}
+
+.catalogue-filter-list {
+	@include reset-ul;
+	@include last-margin;
+
+	font-weight: normal;
+
+	padding: 10px 0;
+	& > li {
+		margin-bottom: 3px;
+		a {
+			color: black;
+			&:hover {
+				color: #182465;
+			}
+		}
+	}
+}

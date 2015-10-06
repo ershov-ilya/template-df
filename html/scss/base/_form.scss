@@ -1,0 +1,284 @@
+/* =======================
+   Form
+   ======================= */
+
+// == Inputs
+// ----------------------
+input[type='text'],
+input[type='tel'],
+input[type='password'],
+input[type='email'],
+input[type='url'] {
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 12px;
+
+	display: block;
+
+	width: 100%;
+	height: 34px;
+	padding: 11px;
+
+	color: black;
+	border: 0;
+	outline: none;
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,.1) inset;
+}
+
+// == Select
+// ----------------------
+select {
+	font-size: 10px;
+
+	width: 100%;
+	height: 34px;
+
+	border: 1px solid #b8b8b8;
+	outline: none;
+	background: white;
+}
+
+// == Button
+// ----------------------
+%btn {
+	@include transition(all .1s ease-in-out);
+
+	font-weight: normal;
+
+	display: inline-block;
+
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: #333;
+	border: 1px solid;
+	background: transparent;
+	&:hover {
+		color: white;
+		border-color: #333;
+		background: #182465;
+	}
+}
+
+.btn {
+	@extend %btn;
+
+	font-size: 11px;
+	line-height: 28px;
+
+	height: 30px;
+	padding: 0 8px;
+
+	border-color: #333;
+}
+
+.btn-default {
+	@extend %btn;
+
+	font-size: 11px;
+	line-height: 28px;
+
+	height: 30px;
+	padding: 0 8px;
+
+	color: #b5b5b4;
+	border-color: #b7b7b7;
+}
+
+.btn-large {
+	@extend %btn;
+
+	font-size: 13px;
+	line-height: 48px;
+
+	height: 50px;
+	padding: 0 18px;
+
+	border-color: #333;
+	background: white;
+}
+
+// == Spinner
+// ----------------------
+.ui-spinner-input {
+	padding-right: 5px;
+	padding-left: 5px;
+
+	text-align: center;
+}
+
+.ui-spinner-button {
+	@extend %btn;
+
+	font-size: 20px;
+	line-height: 32px;
+
+	display: block;
+
+	width: 34px;
+	height: 34px;
+
+	text-align: center;
+
+	color: #999;
+	border-color: #b8b8b8;
+}
+
+// == Custom select
+// ----------------------
+.chosen-container {
+	font-weight: normal;
+
+	position: relative;
+
+	height: 34px;
+	.chosen-single {
+		font-size: 10px;
+		line-height: 14px;
+
+		display: block;
+
+		padding: 9px 30px 9px 11px;
+
+		cursor: pointer;
+
+		color: black;
+		border: 1px solid #b8b8b8;
+		background: white;
+		div {
+			line-height: 14px;
+
+			float: right;
+
+			width: 30px;
+			margin-right: -30px;
+
+			text-align: center;
+			b {
+				@include triangle(8px 5px, #999, down);
+
+				display: inline-block;
+			}
+		}
+	}
+	&.chosen-with-drop {
+		.chosen-single {
+			padding-bottom: 10px;
+
+			border-bottom: 0;
+			div {
+				b {
+					@include triangle(8px 5px, #999, up);
+
+					border-top: 0;
+				}
+			}
+		}
+		.chosen-choices {
+			padding-bottom: 1px;
+
+			border-bottom: 0;
+			border-radius: 3px 3px 0 0;
+		}
+	}
+}
+.chosen-drop {
+	position: absolute;
+	z-index: 1010;
+	top: 100%;
+	left: -9999px;
+
+	width: 100%;
+
+	border: 1px solid #b8b8b8;
+	border-top: 0;
+	background: white;
+	.chosen-with-drop & {
+		left: 0;
+	}
+}
+.chosen-results {
+	@include reset-ul;
+
+	overflow-y: auto;
+
+	max-height: 260px;
+	li {
+		font-size: 10px;
+		line-height: 14px;
+
+		margin: 0;
+		padding: 4px 11px;
+
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		&.active-result {
+			cursor: pointer;
+			&:hover {
+				background: $beige;
+			}
+		}
+		&.result-selected {
+			display: none;
+		}
+	}
+}
+.chosen-search {
+	display: none;
+}
+
+// == Custom checkbox
+// ----------------------
+.custom-checkbox {
+	@include clearfix;
+	input[type='checkbox'] {
+		position: absolute;
+
+		visibility: hidden;
+		clip: rect(0,0,0,0);
+		& + label {
+			font-size: 10px;
+			font-weight: normal;
+			line-height: 34px;
+
+			display: block;
+
+			cursor: pointer;
+			i {
+				position: relative;
+
+				display: block;
+				float: right;
+
+				width: 34px;
+				height: 34px;
+				margin-left: 10px;
+
+				border: 1px solid #b8b8b8;
+				&:before {
+					@include transition(background .1s ease-in-out);
+
+					position: absolute;
+					top: 6px;
+					left: 6px;
+
+					display: block;
+
+					width: 20px;
+					height: 20px;
+
+					content: '';
+
+					background: transparent;
+				}
+			}
+		}
+		&:checked + label i:before {
+			background: #dcdcdc;
+		}
+	}
+}

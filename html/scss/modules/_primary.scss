@@ -1,0 +1,133 @@
+/* ==|====================
+   Modules/Primary navigation
+   ======================= */
+
+.primary {
+	&:before {
+		@include media(max-height 657px) {
+			width: 100%;
+		}
+
+		display: block;
+
+		width: 76px;
+		height: 1px;
+		margin: 0 auto;
+
+		content: '';
+
+		background: #29478a;
+	}
+}
+
+.primary-list {
+	@include reset-ul;
+	&:after {
+		@include media(max-height 657px) {
+			width: 100%;
+		}
+
+		display: block;
+
+		width: 76px;
+		height: 1px;
+		margin: 0 auto;
+
+		content: '';
+
+		background: #29478a;
+	}
+	& > li {
+		& > a {
+			@include transition(background .1s ease-in-out);
+			@include media(max-height 657px) {
+				text-align: left;
+			}
+
+			font-size: 10px;
+			font-weight: 300;
+
+			display: block;
+
+			padding: 15px 10px;
+
+			text-align: center;
+			text-decoration: none;
+
+			color: white;
+			&:before {
+				@extend %sprite;
+				@include media(max-height 657px) {
+					float: left;
+
+					margin: -5px 10px 0 0;
+				}
+
+				display: block;
+
+				width: 25px;
+				height: 25px;
+				margin: 0 auto 5px;
+
+				content: '';
+			}
+		}
+		& > a:hover,
+		&.active > a {
+			position: relative;
+
+			color: #172361;
+			background: $beige;
+		}
+	}
+}
+
+.primary-cart {
+	&:before {
+		background-position: 0 -87px;
+	}
+	.active > &:before,
+	&:hover:before {
+		background-position: 0 -112px;
+	}
+}
+
+.primary-fav {
+	&:before {
+		background-position: -25px -87px;
+	}
+	.active > &:before,
+	&:hover:before {
+		background-position: -25px -112px;
+	}
+}
+
+.primary-contacts {
+	&:before {
+		background-position: -50px -87px;
+	}
+	.active > &:before,
+	&:hover:before {
+		background-position: -50px -112px;
+	}
+}
+
+.primary-faq {
+	&:before {
+		background-position: -75px -87px;
+	}
+	.active > &:before,
+	&:hover:before {
+		background-position: -75px -112px;
+	}
+}
+
+.primary-about {
+	&:before {
+		background-position: -100px -87px;
+	}
+	.active > &:before,
+	&:hover:before {
+		background-position: -100px -112px;
+	}
+}

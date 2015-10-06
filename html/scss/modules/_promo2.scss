@@ -1,0 +1,146 @@
+/* ==|====================
+   Modules/Promo 2
+   ======================= */
+
+.promo2 {
+	@include clearfix;
+
+	margin-bottom: 36px;
+}
+
+.promo2-item {
+	position: relative;
+
+	display: none;
+	float: left;
+	&:first-child {
+		display: block;
+	}
+	img {
+		display: block;
+	}
+}
+
+.promo2-link {
+	text-decoration: none;
+
+	color: #16225c;
+	&:hover {
+		color: #16225c;
+	}
+}
+
+.promo2-guide {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: rgba(244,244,234,.9);
+}
+
+.promo2-guide-inner {
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	bottom: 18px;
+	left: 18px;
+
+	border: 2px solid white;
+	&:before,
+	&:after {
+		@extend %sprite;
+
+		position: absolute;
+		left: 50%;
+
+		display: block;
+
+		width: 64px;
+		height: 30px;
+		margin-left: -32px;
+
+		content: '';
+	}
+	&:before {
+		top: 40px;
+
+		background-position: 0 -163px;
+	}
+	&:after {
+		bottom: 40px;
+
+		background-position: -64px -163px;
+	}
+}
+
+.promo2-guide-content {
+	@include transform(translateY(-50%));
+
+	font-family: $georgia;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	position: absolute;
+	top: 50%;
+	right: 18px;
+	left: 18px;
+
+	text-align: center;
+}
+
+.promo2-guide-caption {
+	font-size: 20px;
+	font-style: normal;
+
+	text-transform: uppercase;
+}
+
+.promo2-event {
+	@include transform(translateY(-50%));
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	width: 250px;
+	margin-left: -125px;
+	padding: 36px 18px;
+
+	text-align: center;
+
+	border: 2px solid white;
+	background: $beige;
+}
+
+.promo2-event-date {
+	font-size: 11px;
+	font-weight: normal;
+
+	width: 140px;
+	margin: 0 auto;
+	padding-bottom: 8px;
+
+	text-transform: uppercase;
+
+	border-bottom: 8px solid #d1d1d1;
+}
+
+.promo2-event-type {
+	font-family: $georgia;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	margin: 5px 0 0;
+}
+
+.promo2-event-caption {
+	font-family: $georgia;
+	font-size: 20px;
+	font-weight: normal;
+
+	text-transform: uppercase;
+}

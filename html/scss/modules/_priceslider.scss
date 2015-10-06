@@ -1,0 +1,86 @@
+/* ==|====================
+   Modules/Price slider
+   ======================= */
+
+.priceslider-holder {
+	padding: 18px 0;
+}
+
+.priceslider-values {
+	@include clearfix;
+
+	margin: 0 -9px 18px;
+}
+
+.priceslider-value {
+	float: left;
+
+	width: 50%;
+	padding: 0 9px 0 31px;
+}
+
+.priceslider-value-label {
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 34px;
+
+	float: left;
+
+	margin-left: -22px;
+}
+
+.priceslider {
+	&.ui-slider {
+		position: relative;
+
+		height: 6px;
+		margin: 3px 0;
+
+		border-right: 5px solid #f4f4f4;
+		border-left: 5px solid #f4f4f4;
+		background: #f4f4f4;
+	}
+	.ui-slider-range {
+		position: absolute;
+
+		height: 6px;
+
+		background: #b7b7b6;
+	}
+	.ui-slider-handle {
+		position: absolute;
+		top: -3px;
+
+		display: block;
+
+		width: 10px;
+		height: 12px;
+		margin-left: -5px;
+
+		outline: none;
+		&:before {
+			position: absolute;
+			top: 0;
+
+			display: block;
+
+			content: '';
+		}
+		&:nth-last-child(1) {
+			background: #af2d4f;
+			&:before {
+				@include triangle(12px 5px, #af2d4f, left);
+
+				left: -5px;
+			}
+		}
+		&:nth-last-child(2) {
+			background: #57a23c;
+			&:before {
+				@include triangle(12px 5px, #57a23c, right);
+
+				right: -5px;
+			}
+		}
+	}
+}

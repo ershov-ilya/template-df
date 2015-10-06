@@ -1,0 +1,280 @@
+/* ==|====================
+   Modules/catnav navigation
+   ======================= */
+
+.catnav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	background: white;
+	box-shadow: 0 1px 0 rgba(21,33,91,.2);
+}
+
+.catnav-toggle {
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 56px;
+
+	position: relative;
+
+	float: left;
+
+	width: 110px;
+	height: 56px;
+
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: .025em;
+	text-transform: uppercase;
+
+	color: white;
+	background: #1c3d86;
+	&:before {
+		font-family: iconfont;
+
+		display: inline-block;
+
+		width: 1em;
+		margin-right: .5em;
+
+		content: '\e800';
+		text-align: center;
+		.catnav_active & {
+			content: '\e803';
+		}
+	}
+	&:after {
+		@include triangle(15px 7px, #1c3d86, right);
+
+		position: absolute;
+		top: 50%;
+		left: 100%;
+
+		display: block;
+
+		margin-top: -7px;
+
+		content: '';
+	}
+}
+
+.catnav-categories {
+	@include reset-ul;
+
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 32px;
+
+	float: left;
+
+	padding: 12px 8px 12px 12px;
+	& > li {
+		font-weight: 500;
+
+		display: none;
+		float: left;
+
+		padding: 0 8px;
+
+		text-transform: uppercase;
+		& > a {
+			text-decoration: none;
+
+			color: white;
+			border-bottom: 1px solid rgba(255,255,255,.2);
+			&:hover {
+				border-color: white;
+			}
+		}
+		&.catnav-categories-caption {
+			font-weight: 300;
+
+			text-transform: none;
+		}
+		&.active {
+			font-weight: bold;
+
+			display: block;
+
+			color: #999;
+		}
+	}
+	.catnav_active & {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 110px;
+
+		float: none;
+
+		color: white;
+		background: #1c3d86;
+		&:before {
+			position: absolute;
+			top: 12px;
+			left: 0;
+
+			display: block;
+
+			width: 1px;
+			height: 32px;
+
+			content: '';
+			letter-spacing: .025em;
+
+			background: white;
+		}
+		& > li {
+			display: block;
+			&.active {
+				display: none;
+			}
+		}
+	}
+}
+
+.catnav-list {
+	@include reset-ul;
+
+	float: left;
+	&:before {
+		display: block;
+		float: left;
+
+		width: 1px;
+		height: 32px;
+		margin: 12px 8px 12px 0;
+
+		content: '';
+
+		background: #0b162f;
+	}
+	& > li {
+		float: left;
+		& > a {
+			@include transition(background .1s ease-in-out);
+
+			font-size: 11px;
+			font-weight: normal;
+			line-height: 56px;
+
+			display: block;
+
+			padding: 0 8px;
+
+			text-decoration: none;
+			letter-spacing: .025em;
+			text-transform: uppercase;
+
+			color: #0b162f;
+			span {
+				border-bottom: 1px solid rgba(0,0,0,.1);
+			}
+		}
+		&:hover > a {
+			color: white;
+			background: #182465;
+			span {
+				border: 0;
+			}
+		}
+	}
+	.catnav_active & {
+		display: none;
+	}
+}
+
+.catnav-submenu {
+	@include clearfix;
+
+	position: absolute;
+	top: 57px;
+	right: 0;
+	left: 110px;
+
+	display: none;
+
+	padding: 15px 0;
+
+	border: 2px solid #f4f4ea;
+	background: white;
+	&:before {
+		position: absolute;
+		top: -3px;
+		right: -2px;
+		left: -2px;
+
+		display: block;
+
+		height: 1px;
+
+		content: '';
+
+		background: #182465;
+	}
+	&:after {
+		@include linear-gradient(360deg, transparent, rgba(0,0,0,.1));
+
+		position: absolute;
+		right: -2px;
+		bottom: -17px;
+		left: -2px;
+
+		display: block;
+
+		height: 15px;
+
+		content: '';
+	}
+	li:hover > & {
+		display: block;
+	}
+}
+
+.catnav-submenu-pic {
+	float: left;
+
+	width: 267px;
+	padding-left: 17px;
+	img {
+		display: block;
+
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.catnav-submenu-columns {
+	overflow: hidden;
+}
+
+.catnav-submenu-lists {
+	display: table;
+
+	width: 100%;
+	height: 100%;
+}
+
+.catnav-submenu-list {
+	@include reset-ul;
+
+	font-weight: normal;
+
+	display: table-cell;
+
+	width: 33.33%;
+	padding: 0 17px;
+
+	border-right: 1px solid #c6c6c6;
+	& > li {
+		margin-bottom: 2px;
+		& > a {
+			color: black;
+			&:hover {
+				color: #4270d5;
+			}
+		}
+	}
+}

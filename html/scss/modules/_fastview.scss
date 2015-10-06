@@ -1,0 +1,78 @@
+/* ==|====================
+   Modules/Fast view
+   ======================= */
+
+.fastview-caption {
+	font-family: $georgia;
+	font-size: 20px;
+
+	margin-bottom: 10px;
+
+	text-align: center;
+	letter-spacing: .025em;
+	text-transform: uppercase;
+}
+
+.fastview-footer {
+	@include clearfix;
+
+	padding: 0 36px;
+	& > *:first-child {
+		float: left;
+	}
+	& > *:last-child {
+		float: right;
+	}
+}
+
+.fastview-price {
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.fastview-photos {
+	@include clearfix;
+
+	width: 500px;
+	margin-bottom: 18px;
+	.owl-nav > * {
+		@include transition(opacity .1s ease-in-out);
+		@extend %sprite;
+
+		position: absolute;
+		top: 50%;
+
+		display: block;
+
+		width: 20px;
+		height: 20px;
+		margin-top: -10px;
+
+		opacity: .4;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.owl-prev {
+		left: 10px;
+
+		background-position: -148px -67px;
+	}
+	.owl-next {
+		right: 10px;
+
+		background-position: -128px -67px;
+	}
+}
+
+.fastview-photo {
+	display: none;
+	float: left;
+	img {
+		display: block;
+	}
+	&:first-child {
+		display: block;
+	}
+}

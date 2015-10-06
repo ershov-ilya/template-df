@@ -1,0 +1,31 @@
+// ----------------------
+// == Custom mixins
+// ----------------------
+
+@mixin reset-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin last-margin {
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin grid($cols) {
+	@include clearfix;
+	& > * {
+		float: left;
+		&:nth-child(#{$cols}n) {
+			margin-right: 0;
+		}
+		&:nth-child(#{$cols}n+1) {
+			clear: left;
+		}
+		&:nth-child(-n+#{$cols}) {
+			margin-top: 0;
+		}
+	}
+}

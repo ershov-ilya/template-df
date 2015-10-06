@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<title>Дом фарфора</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header class="header">
+		<div class="header-logo">Дома фарфора</div>
+		<nav class="primary">
+			<ul class="primary-list">
+				<li><a href="#" class="primary-cart" data-sidebar="cart">Корзина</a></li>
+				<li><a href="#" class="primary-fav" data-sidebar="fav">Избранное</a></li>
+			</ul>
+			<ul class="primary-list">
+				<li><a href="#" class="primary-contacts" data-sidebar="contacts">Контакты</a></li>
+				<li><a href="#" class="primary-faq">Вопросы</a></li>
+				<li><a href="#" class="primary-about">Компания</a></li>
+			</ul>
+		</nav>
+		<a href="#" class="dev">WebProfy</a>
+		<nav class="catnav">
+			<div class="catnav-toggle">меню</div>
+			<ul class="catnav-categories">
+				<li class="catnav-categories-caption">Выберите раздел:</li>
+				<li class="active">Фарфор</li>
+				<li><a href="#">Серебро</a></li>
+				<li><a href="#">Хрусталь</a></li>
+				<li><a href="#">Текстиль</a></li>
+				<li><a href="#">Студия флористики</a></li>
+			</ul>
+			<ul class="catnav-list">
+				<li><a href="#"><span>Бренды</span></a></li>
+				<li><a href="#"><span>Новинки</span></a></li>
+				<li><a href="#"><span>Акции</span></a></li>
+				<li><a href="#"><span>Сервизы</span></a></li>
+				<li><a href="#"><span>Вазы</span></a></li>
+				<li><a href="#"><span>Аксессуары для декора</span></a></li>
+				<li><a href="#"><span>Кухонные принадлежности</span></a>
+					<div class="catnav-submenu">
+						<div class="catnav-submenu-pic">
+							<img src="i/img01.jpg" alt="" width="250" height="238">
+						</div>
+						<div class="catnav-submenu-columns">
+							<div class="catnav-submenu-lists">
+								<ul class="catnav-submenu-list">
+									<li><a href="#">Стеклянные бутылки для масла</a></li>
+									<li><a href="#">Дизайнерская посуда</a></li>
+									<li><a href="#">Наборы и предметы для специй</a></li>
+									<li><a href="#">Формы для выпечки</a></li>
+									<li><a href="#">Емкости для хранения</a></li>
+									<li><a href="#">Креманки и розетки</a></li>
+									<li><a href="#">Кружки</a></li>
+									<li><a href="#">Кувшины</a></li>
+									<li><a href="#">Кастрюли</a></li>
+								</ul>
+								<ul class="catnav-submenu-list">
+									<li><a href="#">Блюда и чаши</a></li>
+									<li><a href="#">Кофейные чашки</a></li>
+									<li><a href="#">Крышки</a></li>
+									<li><a href="#">Чашки</a></li>
+									<li><a href="#">Тарелки</a></li>
+									<li><a href="#">Кофейники</a></li>
+									<li><a href="#">Текстиль</a></li>
+									<li><a href="#">Столовые приборы</a></li>
+									<li><a href="#">Сковородки</a></li>
+								</ul>
+								<ul class="catnav-submenu-list">
+									<li><a href="#">Кухонные аксессуары и приборы</a></li>
+									<li><a href="#">Икорницы</a></li>
+									<li><a href="#">Подносы</a></li>
+									<li><a href="#">Сотейники</a></li>
+									<li><a href="#">Этажерки</a></li>
+									<li><a href="#">Блюда для запекания</a></li>
+									<li><a href="#">Подставки и держатели</a></li>
+									<li><a href="#">Разделочные доски</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li><a href="#"><span>Фарфоровые скульптуры</span></a></li>
+			</ul>
+		</nav>
+		<form action="#" class="search" id="search">
+			<div class="search-input">
+				<input type="text" placeholder="Введите запрос" id="search-input">
+			</div>
+			<button class="search-btn" type="submit">поиск</button>
+			<button class="search-close-btn"></button>
+			<i class="search-separator"></i>
+		</form>
+	</header>
+	<div class="wrapper">
+		<div class="content-header section-header" style="background-image: url(i/section-header-2.jpg);">
+			<ul class="crumbs">
+				<li><a href="#">Главная</a></li>
+			</ul>
+			<h1 class="section-caption">Подбор Сервиза</h1>
+		</div>
+		<div class="container">
+			<div class="filter">
+				<div class="filter-columns">
+					<div class="filter-column">
+						<div class="filter-group filter-group-persons">
+							<div class="filter-group-label">Количество персон:</div>
+							<div class="filter-group-field">
+								<select class="chosen">
+									<option>все</option>
+									<option>не все</option>
+								</select>
+							</div>
+						</div>
+						<div class="filter-group filter-group-type">
+							<div class="filter-group-label">Тип сервиза:</div>
+							<div class="filter-group-field">
+								<select class="chosen">
+									<option>столовый сервиз</option>
+									<option>кухонный сервиз</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="filter-column">
+						<div class="filter-group filter-group-brand">
+							<div class="filter-group-label">Бренд:</div>
+							<div class="filter-group-field">
+								<select class="chosen">
+									<option>все</option>
+									<option>не все</option>
+								</select>
+							</div>
+						</div>
+						<div class="filter-group filter-group-decor">
+							<div class="filter-group-label">Декор:</div>
+							<div class="filter-group-field">
+								<select class="chosen">
+									<option>все</option>
+									<option>не все</option>
+									<option>почти все</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="filter-column">
+						<div class="filter-group custom-checkbox">
+							<input type="checkbox" id="in-stock" name="sort-options" checked> <label for="in-stock"><i></i>Есть на складе</label>
+						</div>
+						<div class="filter-group custom-checkbox">
+							<input type="checkbox" id="without-price" name="sort-options"> <label for="without-price"><i></i>Без цены</label>
+						</div>
+					</div>
+					<div class="filter-column">
+						<div class="filter-group custom-checkbox">
+							<input type="checkbox" id="novelties" name="sort-options"> <label for="novelties"><i></i>Новинки</label>
+						</div>
+						<div class="filter-group custom-checkbox">
+							<input type="checkbox" id="discounts" name="sort-options"> <label for="discounts"><i></i>Скидки и акции</label>
+						</div>
+					</div>
+					<div class="filter-column">
+						<div class="priceslider-holder">
+							<div class="priceslider-values">
+								<div class="priceslider-value">
+									<div class="priceslider-value-label">От</div>
+									<input type="text" class="priceslider-min-value">
+								</div>
+								<div class="priceslider-value">
+									<div class="priceslider-value-label">До</div>
+									<input type="text" class="priceslider-max-value">
+								</div>
+							</div>
+							<div class="priceslider" data-min="0" data-max="15000" data-step="100"></div>
+						</div>
+					</div>
+				</div>
+				<div class="more">
+					<div class="more-link-holder">
+						<a href="#" class="btn-default">Подобрать сервиз</a>
+					</div>
+				</div>
+			</div>
+			<div class="products">
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img40.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">3 569 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/28 "Перл Голд"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img41.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">1 136 708 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/27 "Бабочки на лугу"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img42.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Запрос цены</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-empty">Цена по запросу</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/32 "Византийские мечты"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img43.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">26 271 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/33 "Батлер Пентри"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img44.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">3 569 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/28 "Перл Голд"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img45.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">1 136 708 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/27 "Бабочки на лугу"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img46.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-empty">Цена по запросу</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/32 "Византийские мечты"
+						</div>
+					</div>
+				</div>
+				<div class="products-item">
+					<div class="product">
+						<div class="product-pic">
+							<img src="i/img47.jpg" alt="" width="250" height="250">
+							<div class="product-popup">
+								<a href="#" class="product-popup-btn">Подробнее о товаре</a>
+								<a href="#" class="product-popup-btn" data-popup="fastview-popup">Быстрый просмотр</a>
+							</div>
+						</div>
+						<div class="product-price">
+							<span class="product-price-value">26 271 ₽</span>
+						</div>
+						<div class="product-info">
+							Сервиз столовый 6/33 "Батлер Пентри"
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="siteinfo">
+			© «Дом Фарфора» – интернет-магазин фарфора и предметов декора интерьера  |  <a href="mailto:zakaz@domfarfora.ru">zakaz@domfarfora.ru</a>
+		</div>
+		<form action="#" class="subscribe">
+			<div class="subscribe-caption">Подпишитесь на наши новости и спецпредложения:</div>
+			<input type="email" placeholder="Ваш e-mail">
+			<button class="btn-default">Подписаться</button>
+		</form>
+		<div class="footer-social">
+			<a href="#"><i class="icon icon-facebook"></i></a>
+			<a href="#"><i class="icon icon-instagramm"></i></a>
+		</div>
+	</footer>
+	<div class="overlay">
+		<div class="sidebar" id="cart">
+			<div class="sidebar-inner">
+				<div class="sidebar-auth">
+					<a href="#" class="login-link"><span>Авторизация</span></a>
+					<a href="#" class="registration-link">Регистрация</a>
+				</div>
+				<div class="sidebar-external">
+					<div class="sidebar-external-inner">
+						<a href="#" class="btn">Перейти в корзину</a>
+					</div>
+				</div>
+				<div class="sidebar-cart">
+					<div class="sidebar-cart-caption">В вашей корзине: 2 товара на сумму:</div>
+					<div class="sidebar-cart-sum">54 000 ₽</div>
+					<a href="#" class="btn">Оформить заказ</a>
+				</div>
+				<div class="sidebar-products">
+					<div class="sidebar-products-item">
+						<div class="product">
+							<div class="product-pic">
+								<a href="#"><img src="i/img02.jpg" alt="" width="250" height="250"></a>
+							</div>
+							<div class="product-price">
+								<span class="product-price-value">26 271 ₽</span>
+							</div>
+							<div class="product-info">
+								Бокал для красного вина 260мл "Кетона"
+							</div>
+							<div class="product-counter-vertical">
+								<input class="spinner" type="text" value="1">
+							</div>
+							<button class="product-remove-btn"></button>
+						</div>
+					</div>
+					<div class="sidebar-products-item">
+						<div class="product">
+							<div class="product-pic">
+								<a href="#"><img src="i/img03.jpg" alt="" width="250" height="250"></a>
+							</div>
+							<div class="product-price">
+								<span class="product-price-empty">Цена по запросу</span>
+							</div>
+							<div class="product-info">
+								Ваза 32см "Азиатские мечты"
+							</div>
+							<div class="product-counter-vertical">
+								<input class="spinner" type="text" value="1">
+							</div>
+							<button class="product-remove-btn"></button>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar-up">
+					<div class="sidebar-up-inner">
+						<a href="#" class="sidebar-up-btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar" id="fav">
+			<div class="sidebar-inner">
+				<div class="sidebar-auth">
+					<a href="#" class="login-link"><span>Авторизация</span></a>
+					<a href="#" class="registration-link">Регистрация</a>
+				</div>
+				<div class="sidebar-external">
+					<div class="sidebar-external-inner">
+						<a href="#" class="btn">Перейти в избранное</a>
+					</div>
+				</div>
+				<div class="sidebar-cart">
+					<div class="sidebar-cart-caption">В вашей корзине: 2 товара на сумму:</div>
+					<div class="sidebar-cart-sum">54 000 ₽</div>
+					<a href="#" class="btn">Оформить заказ</a>
+				</div>
+				<div class="sidebar-products">
+					<div class="sidebar-products-item">
+						<div class="product">
+							<div class="product-pic">
+								<a href="#"><img src="i/img02.jpg" alt="" width="250" height="250"></a>
+							</div>
+							<div class="product-price">
+								<span class="product-price-value">26 271 ₽</span>
+							</div>
+							<div class="product-info">
+								Бокал для красного вина 260мл "Кетона"
+							</div>
+							<button class="product-cart-btn"></button>
+							<button class="product-remove-btn"></button>
+						</div>
+					</div>
+					<div class="sidebar-products-item">
+						<div class="product">
+							<div class="product-pic">
+								<a href="#"><img src="i/img03.jpg" alt="" width="250" height="250"></a>
+							</div>
+							<div class="product-price">
+								<span class="product-price-empty">Цена по запросу</span>
+							</div>
+							<div class="product-info">
+								Ваза 32см "Азиатские мечты"
+							</div>
+							<button class="product-cart-btn"></button>
+							<button class="product-remove-btn"></button>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar-up">
+					<div class="sidebar-up-inner">
+						<a href="#" class="sidebar-up-btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar" id="contacts">
+			<div class="sidebar-inner">
+				<div class="sidebar-contacts">
+					<div class="sc-location">
+						Город: <a href="#" class="sc-location-link">Москва</a>
+					</div>
+					<div class="sc-tel">+7 (495) 989-61-81</div>
+					<div class="sc-workhours">С 10:00 до 19:00</div>
+					Кроме выходных и праздничных дней
+				</div>
+				<div class="sidebar-external">
+					<div class="sidebar-external-inner">
+						<a href="#" class="btn">Все магазины и бутики</a>
+					</div>
+				</div>
+				<div class="sidebar-contacts">
+					<div class="sc-caption">Фирменные магазины</div>
+					<ul class="sc-list">
+						<li>
+							<div class="sc-shop-name"><a href="#">Дом Фарфора</a></div>
+							Ленинский проспект, д. 36<br>
+							+7 (495) 995 60 23
+						</li>
+						<li>
+							<div class="sc-shop-name"><a href="#">Дом Фарфора</a></div>
+							Галерея Времена Года, 0 этаж, Кутузовский проспект, 48<br>
+							+7 (495) 797 98 39
+						</li>
+						<li>
+							<div class="sc-shop-name"><a href="#">Дом Фарфора</a></div>
+							МТК Гранд-2, 1 этаж, Химки, Ленинградское шоссе<br>
+							+7 (495) 796 91 79
+						</li>
+						<li>
+							<div class="sc-shop-name"><a href="#">Дом Фарфора</a></div>
+							Ленинский проспект, д. 36, ТРЦ Европейский, 0 этаж, пл. Киевского вокзала, д. 2<br>
+							+7 (495) 229 84 26
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar-contacts">
+					<div class="sc-caption">Бутики</div>
+					<ul class="sc-list">
+						<li>
+							<div class="sc-shop-name"><a href="#">Бутик Meissen</a></div>
+							ТЦ Dream House, Рублево-Успенское шоссе., д. 85/1<br>
+							+7 (495) 739 27 73
+						</li>
+						<li>
+							<div class="sc-shop-name"><a href="#">Бутик Moser</a></div>
+							ТЦ Dream House, Рублево-Успенское шоссе., д. 85/1<br>
+							тел.: +7 (495) 739 25 98
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar-up">
+					<div class="sidebar-up-inner">
+						<a href="#" class="sidebar-up-btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-overlay">
+		<div class="popup" id="fastview-popup">
+			<button class="popup-close-btn"></button>
+			<div class="fastview-caption">Сервиз столовый 6/27 "Бабочки на лугу"</div>
+			<div class="item-price fastview-price">
+				<span class="item-price-value">1 136 708 ₽</span>
+			</div>
+			<div class="fastview-photos">
+				<div class="fastview-photo"><img src="i/img48.jpg" alt="" width="500" height="290"></div>
+				<div class="fastview-photo"><img src="i/img48.jpg" alt="" width="500" height="290"></div>
+				<div class="fastview-photo"><img src="i/img48.jpg" alt="" width="500" height="290"></div>
+				<div class="fastview-photo"><img src="i/img48.jpg" alt="" width="500" height="290"></div>
+			</div>
+			<footer class="fastview-footer">
+				<a href="#" class="btn-large">Подробнее о товаре</a>
+				<a href="#" class="btn-large">Положить в корзину</a>
+			</footer>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/chosen.jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

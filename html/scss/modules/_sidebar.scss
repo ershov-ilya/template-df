@@ -1,0 +1,414 @@
+/* ==|====================
+   Modules/Sidebar
+   ======================= */
+
+.sidebar {
+	position: fixed;
+	top: 56px;
+	bottom: 0;
+	left: 110px;
+
+	display: none;
+	overflow-y: auto;
+
+	width: 286px;
+
+	background: $beige;
+}
+
+.sidebar-inner {
+	@include last-margin;
+
+	padding: 36px 18px;
+}
+
+.sidebar-top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	height: 0;
+}
+
+// == Sidebar authorization
+// ----------------------
+.sidebar-auth {
+	@include clearfix;
+
+	margin-bottom: 18px;
+}
+
+.login-link {
+	font-size: 11px;
+	font-weight: normal;
+
+	float: left;
+
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: black;
+	&:before {
+		@extend %sprite;
+
+		display: inline-block;
+
+		width: 16px;
+		height: 16px;
+		margin: 0 .25em -4px 0;
+
+		content: '';
+		text-align: center;
+
+		background-position: 0 -137px;
+	}
+	span {
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	&:hover {
+		color: black;
+		span {
+			border-color: black;
+		}
+	}
+}
+
+.registration-link {
+	font-size: 10px;
+	font-weight: normal;
+
+	float: right;
+
+	margin-top: 2px;
+
+	color: #9c9c9c;
+	&:hover {
+		color: #182465;
+	}
+}
+
+// == Sidebar external link holder
+// ----------------------
+.sidebar-external {
+	display: table;
+
+	width: 100%;
+	margin: 18px 0;
+
+	text-align: center;
+	&:before,
+	&:after {
+		display: table-cell;
+
+		width: 50%;
+
+		content: '';
+
+		background: url('../i/external-separator.png') repeat-x 0 50%;
+		background-size: 1px 1px;
+	}
+}
+
+.sidebar-external-inner {
+	display: table-cell;
+
+	padding: 0 9px;
+
+	background: $beige;
+	.btn {
+		min-width: 132px;
+	}
+}
+
+// == Sidebar cart
+// ----------------------
+.sidebar-cart {
+	margin: 18px 0;
+	padding: 18px;
+
+	text-align: center;
+
+	background: white;
+	.btn {
+		min-width: 132px;
+	}
+}
+
+.sidebar-cart-caption {
+	font-family: $georgia;
+	font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #333;
+}
+
+.sidebar-cart-sum {
+	font-size: 24px;
+	font-weight: 500;
+
+	margin: 10px 0;
+
+	color: black;
+}
+
+// == Sidebar products
+// ----------------------
+.sidebar-products {
+	@include last-margin;
+
+	margin-bottom: 36px;
+}
+
+.sidebar-products-item {
+	margin-bottom: 18px;
+}
+
+// == Sidebar up button
+// ----------------------
+.sidebar-up {
+	display: table;
+
+	width: 100%;
+	margin: 18px 0;
+
+	text-align: center;
+	&:before,
+	&:after {
+		display: table-cell;
+
+		width: 50%;
+
+		content: '';
+
+		background: url('../i/external-separator.png') repeat-x 0 50%;
+		background-size: 1px 1px;
+	}
+}
+
+.sidebar-up-inner {
+	display: table-cell;
+
+	padding: 0 9px;
+
+	background: $beige;
+}
+
+.sidebar-up-btn {
+	@extend .btn;
+	&:before {
+		@extend %sprite;
+
+		display: inline-block;
+
+		width: 18px;
+		height: 10px;
+
+		content: '';
+
+		background-position: 0 -153px;
+	}
+	&:hover:before {
+		background-position: -18px -153px;
+	}
+}
+
+// == Sidebar contacts
+// ----------------------
+.sidebar-contacts {
+	font-size: 10px;
+	line-height: 1.5;
+
+	margin-bottom: 18px;
+	padding: 18px;
+
+	background: white;
+}
+
+.sc-location {
+	font-size: 12px;
+
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.sc-location-link {
+	font-weight: 500;
+
+	text-decoration: none;
+
+	border-bottom: 1px dotted;
+}
+
+.sc-tel {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
+
+	margin-bottom: 10px;
+}
+
+.sc-workhours {
+	font-size: 12px;
+}
+
+.sc-caption {
+	font-size: 14px;
+	font-weight: 500;
+
+	margin-bottom: 18px;
+}
+
+.sc-list {
+	@include reset-ul;
+	& > li {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			border-bottom: 0;
+		}
+	}
+}
+
+.sc-shop-name {
+	font-size: 12px;
+	font-weight: 500;
+
+	margin-bottom: 5px;
+	a {
+		color: black;
+		&:hover {
+			color: #182465;
+		}
+	}
+}
+
+
+
+
+.mCustomScrollbar {
+	-ms-touch-action: none;
+	    touch-action: none; /* MSPointer events - direct all pointer events to js */
+}
+.mCustomScrollbar.mCS_no_scrollbar {
+	-ms-touch-action: auto;
+	    touch-action: auto;
+}
+
+.mCustomScrollBox {
+	/* contains plugin's markup */
+	position: relative;
+
+	overflow: hidden;
+
+	max-width: 100%;
+	height: 100%;
+
+	outline: none;
+}
+
+.mCSB_container {
+	/* contains the original content */
+	overflow: hidden;
+
+	width: auto;
+	height: auto;
+}
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+	margin-right: 0;
+} /* non-visible scrollbar */
+
+.mCSB_scrollTools {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: auto;
+
+	width: 18px;
+	height: auto;
+
+	background: white;
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+	right: -18px;
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	height: auto;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+	display: none;
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+	z-index: 1;
+
+	width: 100%;
+	height: 30px;
+
+	cursor: pointer;
+
+	background: #172363;
+	&:before {
+		@include triangle(13px 6px, #172363, left);
+
+		position: absolute;
+		top: 50%;
+		left: -6px;
+
+		display: block;
+
+		margin-top: -5px;
+
+		content: '';
+	}
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	position: absolute;
+	top: 50%;
+	left: 3px;
+
+	width: 12px;
+	height: 1px;
+
+	background: rgba(255,255,255,.1);
+	&:before,
+	&:after {
+		position: absolute;
+		left: 0;
+
+		display: block;
+
+		width: 100%;
+		height: 1px;
+
+		content: '';
+
+		background: rgba(255,255,255,.1);
+	}
+	&:before {
+		top: -3px;
+	}
+	&:after {
+		bottom: -3px;
+	}
+}
